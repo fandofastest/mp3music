@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#77F9F9F9"
+    tools:context=".ProberMainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#77F9F9F9" />
+
+    <RelativeLayout
+        android:id="@+id/centerArea"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                app:cardBackgroundColor="#77F9F9F9"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="50dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="#search #trending #music"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textColor="#5492ff"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/advertise"
+                        android:layout_width="70dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:textSize="12sp"
+                        android:background="@drawable/advertiser"
+                        android:text="Advertiser"
+                        android:textStyle="italic"
+                        android:textColor="#262626"
+                        android:visibility="visible" />
+
+                    <RelativeLayout
+                        android:id="@+id/ad_holder"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
+                        android:gravity="bottom" >
+                        <RelativeLayout
+                            android:id="@+id/banner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_offline"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/round_bg"
+                            android:textStyle="bold"
+                            android:text="local"
+                            android:textColor="#ffffff"
+                            android:visibility="visible" />
+
+                        <Button
+                            android:id="@+id/policy"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/round_bg"
+                            android:textStyle="bold"
+                            android:text="policy" />
+
+                        <Button
+                            android:id="@+id/rate"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/round_bg"
+                            android:textStyle="bold"
+                            android:text="Rate" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <SearchView
+                            android:id="@+id/searchView"
+                            android:layout_width="275dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="3dp"
+                            android:layout_below="@+id/textTop"
+                            android:background="@drawable/round_bg_srch" />
+
+                        <ImageButton
+                            android:id="@+id/btn_search"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/btnsearch"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold"
+                            android:text="search" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/disclaimer"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/disclaimerfront"
+                        android:textAlignment="center"
+                        android:layout_marginTop="20dp"
+                        android:textStyle="normal"
+                        android:textColor="#000000"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardHome"
+                android:layout_marginTop="80dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
